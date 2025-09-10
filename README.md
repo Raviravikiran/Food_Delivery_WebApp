@@ -1,40 +1,160 @@
-# Food_Delivery_WebApp
-"Online Food Delivery Web Application"
+## 🚀 Food Delivery Web Application  
+A full-stack web application built using **HTML, CSS, JS, JSP, Servlets, JDBC, and MySQL**.  
 
-Overview
-This is a full-stack web application for an online food delivery service, developed as a capstone project for the 6-month Full Stack Development course at Tap Academy. The application simulates an e-commerce platform where users can browse food items, place orders, and manage their account.
+🔗 [View Repository](https://github.com/AbivarnaMasanam/FoodDeliveryApplication)  
 
-Key Features
-User Management: Secure user registration, login, and profile management.
 
-Product Catalog: Browse a list of available food items with details and images.
+1. Introduction
+   
+   Foodly is an online food delivery web application that allows users to browse restaurants, explore menus, place food orders, and get them delivered conveniently.
+The application provides a smooth and user-friendly interface for customers to order their favorite meals online in just a few clicks.
+The system integrates frontend technologies (HTML, CSS, JavaScript) with backend technologies (Java Servlets, JSP, JDBC) and a MySQL database to store user, restaurant, and order details.
+________________________________________
+2. Objectives
 
-Shopping Cart: Add, remove, and manage food items in a session-based shopping cart.
+   •To develop a responsive and user-friendly food delivery platform.
+   
+   •To provide restaurant listings with menu details.
+   
+   •To enable users to add items to the cart and place orders.
+   
+   •To manage order history and delivery details efficiently.
+   
+   •To ensure secure login and order processing.
+________________________________________
+3. Technologies Used
+   
+Frontend:
 
-Order Processing: A complete end-to-end ordering system from checkout to order confirmation.
+•HTML5 – Structure of web pages.
 
-Order History: Users can view a complete history of their past orders.
+•CSS3 – Styling and responsiveness.
 
-Technology Stack
-The project is built using a classic Java-based web stack:
+•JavaScript – Client-side interactivity.
 
-Frontend: HTML, CSS, JSP (JavaServer Pages)
+Backend:
 
-Backend: Java, Servlets (for handling business logic and routing)
+•Java Servlet & JSP – Server-side logic & dynamic page rendering.
 
-Database: MySQL (for data persistence)
+•JDBC (Java Database Connectivity) – Database interaction.
 
-Data Access: JDBC (Java Database Connectivity)
+Database:
 
-Project Architecture
-The application follows a layered, MVC-like (Model-View-Controller) architectural pattern to ensure a clean separation of concerns:
+•MySQL – Storage of user data, restaurant details, menu items, orders, and transaction details.
 
-Database Layer: Four core tables (users, products, orders, and order_items) were designed and populated with relevant data (specifically for India) to serve as the foundation.
+Tools & Server:
 
-Model Layer: Java POJO (Plain Old Java Object) classes were created to represent the data from each table.
+•Apache Tomcat – Web server for running servlets and JSP.
 
-DAO Layer: A Data Access Object (DAO) pattern was implemented with interfaces and concrete classes to manage all database interactions, keeping JDBC code isolated.
+•Eclipse – IDE for development.
+________________________________________
 
-Controller & View Layer: Servlets act as controllers, handling user requests and orchestrating business logic, while JSPs serve as the views to render dynamic content.
+4. System Architecture
+   
+    The system follows a 3-tier architecture:
 
-This description highlights the key aspects of your project, the technologies you mastered, and the sound architectural principles you applied, making it an excellent reference for your portfolio.
+   1.Presentation Layer (Frontend) – HTML, CSS, JS (User interface).
+   
+   2.Application Layer (Backend) – Java Servlets, JSP (Business logic).
+   
+   3.Database Layer – MySQL (Data storage).
+   
+Flow:
+User → Web Browser (UI) → Servlet/JSP → JDBC → MySQL Database
+________________________________________
+5. Modules of the Application
+
+        1. User Module
+   
+                •User Registration & Login (Authentication).
+                •Profile Management.
+   
+        2. Restaurant Module
+   
+                •View restaurant listings.
+                •View restaurant details & menu.
+   
+        3. Search & Filter Module
+   
+                •Search by location, restaurant, or food item.
+                •Filter by Veg / Non-Veg / Bestseller.
+   
+        4. Cart Module
+   
+                •Add/remove menu items.
+                •View cart summary (items, quantity, price).
+   
+        5. Order Module
+    
+                •Place order with delivery details.
+                •Select payment method (Cash on Delivery / Online).
+                •Order tracking & confirmation.
+   
+        6. Admin Module
+    
+                •Manage restaurants, menu, and offers.
+                •Track orders and users.
+________________________________________
+6. Database Design
+   
+Main Tables (Example sample):
+
+                1.Users – (user_id, name, email, password, phone, address)
+                2.Restaurants – (restaurant_id, name, location, rating, offers)
+                3.Menu – (menu_id, restaurant_id, item_name, price, category, veg/non-veg)
+                4.Cart – (cart_id, user_id, menu_id, quantity)
+                5.Orders – (order_id, user_id, restaurant_id, total_price, status, order_time)
+                6.Order_Items – (order_item_id, order_id, menu_id, quantity, price)
+________________________________________
+7. Workflow
+   
+        🔹 Homepage
+                •Search restaurants and food items.
+                •View offers and popular restaurants.
+        
+        🔹 Restaurant Listings
+                •Display of restaurants with ratings, cuisine, and delivery time.
+        
+        🔹 Menu Page
+                •Display of restaurant menu with categories.
+                •Option to add items to cart.
+        🔹 Cart Page
+                •View selected items.
+                •Update quantity or remove items.
+                •Order summary with subtotal, taxes, and delivery fee.
+        🔹 Checkout Page
+                •Enter delivery details.
+                •Choose payment method.
+                •Place final order.
+        🔹 Order Confirmation
+                •Order ID & confirmation message.
+                •Estimated delivery time.
+________________________________________
+8. Key Features
+   
+   •User authentication (Login/Signup).
+   
+   •Restaurant and menu browsing.
+   
+   •Dynamic cart and checkout system.
+   
+   •Real-time order summary.
+   
+   •Discount and offer integration.
+   
+   •Secure and scalable architecture.
+________________________________________
+9. Future Enhancements
+    
+   •Live order tracking with delivery partner module.
+   
+   •AI-based food recommendations.
+
+   •Admin dashboard for analytics.
+   
+   •Push notifications for order status.
+________________________________________
+10. Conclusion
+    
+     The Foodly Food Delivery Web Application provides an efficient way for users to order food online from multiple restaurants. Using Java Servlets, JSP, and MySQL, the application ensures smooth order management and data handling. With a responsive UI built with HTML, CSS, and JavaScript, it enhances the user experience and brings convenience to customers.
+
